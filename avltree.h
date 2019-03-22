@@ -11,6 +11,7 @@ template <class type> class avltree{
             avltree();
             void traverse(tnode<type>* root);
             void display();
+            bool isEmpty();
             void display(tnode<type>* root);
             void insert(type item);//helper
             tnode<type>* insertion(tnode<type>* tree, type item);
@@ -42,6 +43,10 @@ void avltree<type>::display(){ //primary for cout
     else {
         traverse(root);
     }
+}
+template<class type>
+bool avltree<type>::isEmpty(){
+    return (root == NULL);
 }
 template<class type>
 void avltree<type>::insert(type item){ //primary insertion function
